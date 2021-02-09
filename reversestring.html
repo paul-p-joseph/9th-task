@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+    .my-style{
+            background-color: #ffc107;
+            padding: 20px;
+        }
+        .my-form{
+            padding: 20px;
+        }
+        .my-form .form-group{
+            padding-bottom: 15px;
+        }
+        .my-form label{
+            display: block;
+        }
+        .my-form input[type="text"]{
+            width: 100%;
+        }
+        .my-form input[type="submit"]{
+            background-color:#007bff;
+            color:white;
+            padding:10px 15px ;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-style">
+
+        <div class ="row bg-light p-3">
+
+            <div class="col-3 bg-primary">
+
+            </div>
+
+            <div class="col-6 bg-warning">
+
+             <form class="my-form">
+
+                 <div class="form-group">
+                     <label>Enter String :</label>
+                     <input type ="text" name ="string" id="str">
+                 </div>
+
+
+                   
+                    <center><input class="button" type="submit" value="Submit" onclick="foo()"></center>
+                   
+                       
+                   
+             </form>
+
+           </div>
+
+           <div class="col-3 bg-primary">
+
+           </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+    function foo(){
+        let string = document.getElementById('str').value;
+
+        console.log(string);
+        let arr = string.split("");
+        console.log(arr);
+        let arrRev = arr.reverse();
+        console.log(arrRev);
+        arrRev = arrRev.join();
+        arrRev = arrRev.replace(/,/g,"");
+        alert("The reversed string is : "+arrRev);
+
+
+
+
+    }
+     
+
+    </script>
+</body>
+</html>
